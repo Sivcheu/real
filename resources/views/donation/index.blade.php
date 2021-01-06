@@ -19,11 +19,6 @@
                 <td>{{$donor->lastname}}</td>
                 <td>${{$donor->amount}}</td>
                 <td>{{$donor->name}}</td>
-                <td>
-{{--                    <a href="/event-edit/{{$event->id}}" class="btn btn-warning">Edit</a>--}}
-{{--                    <a href="/event-show/{{$event->id}}" class="btn btn-info">Detail</a>--}}
-{{--                    <a href="/event-delete/{{$event->id}}" class="btn btn-danger">Delete</a>--}}
-                </td>
             </tr>
         @endforeach
         </tbody>

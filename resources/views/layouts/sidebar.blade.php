@@ -63,8 +63,13 @@
     <div class="sidebar-menu">
         <ul >
             <li>
-                <a href="">
-                    <span>User</span>
+                <a href="/userJoinEvent">
+                    <span>UserJoinEvent</span>
+                </a>
+            </li>
+            <li>
+                <a href="/userJoinEvent">
+                    <span>UserJoinEvent</span>
                 </a>
             </li>
             <li>

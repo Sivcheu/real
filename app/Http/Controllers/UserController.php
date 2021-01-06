@@ -46,12 +46,14 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect('/loginForm');
+        $request->session()->put('user', $user);
+        return redirect('/home');
     }
 
     public function logout()
     {
         Session::forget('user');
+        Session::forget('joined');
         return redirect('/home');
     }
 
@@ -62,15 +64,6 @@ class UserController extends Controller
     public function adminLoginForm(){
         return view('admin.login');
     }
-    public function loginA(Request $request)
-    {
-        $admin = Admin::where(['name' => $request->name])->first();
-        if (!$admin || !Hash::check($request->password, $admin->password)) {
-            return "name and password in wrong";
-        } else {
-            $request->session()->put('user', $admin);
-            return redirect('/admin');
-        }
-    }
+
 
 }

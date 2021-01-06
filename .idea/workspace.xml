@@ -11,6 +11,12 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
@@ -122,6 +128,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1mSBTiYCsT2Nx1f2s6csX5QuJPj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -161,22 +168,29 @@
       <updated>1609477124546</updated>
       <workItem from="1609477129073" duration="18749000" />
       <workItem from="1609502277342" duration="11307000" />
-      <workItem from="1609689366600" duration="3201000" />
+      <workItem from="1609689366600" duration="3965000" />
+      <workItem from="1609752014595" duration="1143000" />
+      <workItem from="1609836431223" duration="11330000" />
+      <workItem from="1609932642385" duration="1696000" />
+      <workItem from="1609934388496" duration="13269000" />
+      <workItem from="1609958298134" duration="565000" />
+      <workItem from="1609959028486" duration="2813000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Middleware/AdminAuth.php</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

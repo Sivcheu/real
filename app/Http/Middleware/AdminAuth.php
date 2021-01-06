@@ -19,7 +19,10 @@ class AdminAuth
     {
         if ($request->path()=='adminLoginForm' && $request->session()->has('admin')){
             return redirect('/admin');
+        }elseif(!Session::has('admin')){
+            return redirect('/adminForm');
+        }else{
+            return $next($request);
         }
-        return $next($request);
     }
 }

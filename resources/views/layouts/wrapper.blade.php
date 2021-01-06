@@ -7,13 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <style>
     body {
         margin: 0;
         font-size: .9rem;
-        font-family: Arial;
+        font-family: 'Roboto Condensed', sans-serif;
         font-weight: 400;
         line-height: 1.6;
         color: #212529;
@@ -63,8 +66,8 @@
     .cs-image {
         margin-left: auto;
         margin-right: auto;
-        width: 500px;
-
+        width: 350px;
+        border-radius: 20px;
     }
 
     .cs-header {
@@ -74,11 +77,6 @@
     .cs-p {
         max-height: 80px;
         overflow: auto;
-    }
-
-    .cs-donation {
-        margin-top: auto;
-        margin-bottom: auto;
     }
 
     .cs-h {
@@ -91,32 +89,31 @@
         width: 700px;
         height: auto;
     }
-    .header {
-        overflow: hidden;
-        padding: 20px 10px;
+
+    .welcome {
+        background-color: #e1e1e7;
     }
 
-    .header a {
-        float: left;
-        color: black;
-        text-align: center;
-        padding: 12px;
-        text-decoration: none;
-        font-size: 18px;
-        line-height: 25px;
-        border-radius: 4px;
+    .volunteer {
+        background-color: #e1e1e7;
     }
-
-    .header a.logo {
-        font-size: 25px;
-        font-weight: bold;
+    .cs-footer{
+        background-color: #e1e1e7 !important;
+        margin-top: 100px !important;
     }
 </style>
 <body>
 {{\Illuminate\Support\Facades\View::make('navbar')}}
+@yield('intro')
+
 <div class="container">
     @yield('ct')
 </div>
+@yield('vol')
+<div class="container">
+    @yield('event')
+</div>
+{{\Illuminate\Support\Facades\View::make('footer')}}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>

@@ -24,8 +24,10 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/loginForm', [\App\Http\Controllers\UserController::class, 'loginForm']);
 Route::post('/login', [\App\Http\Controllers\UserController::class, 'login']);
 Route::get('/logout', [\App\Http\Controllers\UserController::class, 'logout']);
-Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'admin']);
-
+Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'admin'])->middleware('adminAuth');
+Route::get('/adminForm',[\App\Http\Controllers\AdminController::class, 'adminLoginForm']);
+Route::post('/adminLogin',[\App\Http\Controllers\AdminController::class,'adminLogin']);
+Route::get('/adminLogout',[\App\Http\Controllers\AdminController::class, 'logout']);
 //for admin
 Route::get('/event-index', [\App\Http\Controllers\EventController::class, 'index']);
 Route::get('/event-create', [\App\Http\Controllers\EventController::class, 'create']);
@@ -34,7 +36,9 @@ Route::get('/event-show/{id}', [\App\Http\Controllers\EventController::class, 's
 Route::get('/event-edit/{id}', [\App\Http\Controllers\EventController::class, 'edit']);
 Route::post('/event-update', [\App\Http\Controllers\EventController::class, 'update'])->name('update_event');
 Route::get('/event-delete/{id}', [\App\Http\Controllers\EventController::class, 'destroy']);
+Route::get('/userJoinEvent',[\App\Http\Controllers\EventHasUserController::class,'userJoinEvent']);
 
+Route::post('/test',[\App\Http\Controllers\EventHasUserController::class,'join']);
 //for user
 Route::get('/event',[\App\Http\Controllers\EventController::class,'indexForUser']);
 

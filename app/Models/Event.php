@@ -20,4 +20,10 @@ class Event extends Model
      * @var mixed|string
      */
 
+    public function isJoin($user_id)
+    {
+        $isJoin = EventHasUser::where("user_id",$user_id)->where("event_id",$this->id)->first();
+        return $isJoin;
+    }
+
 }

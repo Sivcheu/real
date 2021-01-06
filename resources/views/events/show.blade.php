@@ -1,6 +1,6 @@
 @extends('layouts.sidebar')
 
-@section('content')
+@section('ct')
     <h1>{{$event->title}}</h1>
     <p>{{$event->description}}</p>
     <h5>{{$event->start}}</h5>

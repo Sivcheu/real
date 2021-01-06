@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Org;
 use Illuminate\Http\Request;
 use App\Models\Event;
+use Illuminate\Support\Facades\Session;
 
 class EventController extends Controller
 {
     public function index()
     {
-        $events = Event::orderby('id','DESC')->get();
-        return view('events.index',compact('events'));
+        $events = Event::orderby('id', 'DESC')->get();
+        return view('events.index', compact('events'));
     }
 
     public function create()
@@ -30,28 +32,28 @@ class EventController extends Controller
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
             $filename = time() . '.' . $ext;
-            $file->move('image',$filename);
+            $file->move('image', $filename);
             $event->image = $filename;
-        }else{
+        } else {
             return $request;
             $event->image = '';
             echo "Error";
         }
         $event->save();
-        return redirect('/event-index')->with('event',$event);
+        return redirect('/event-index')->with('event', $event);
 
     }
 
     public function show($id)
     {
-        $event = Event::where('id',$id)->first();
-        return view('events.show',compact('event'));
+        $event = Event::where('id', $id)->first();
+        return view('events.show', compact('event'));
     }
 
     public function edit($id)
     {
         $event = Event::find($id);
-        return view('events.edit')->with('event',$event);
+        return view('events.edit')->with('event', $event);
     }
 
     public function update(Request $request)
@@ -65,26 +67,29 @@ class EventController extends Controller
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
             $filename = time() . '.' . $ext;
-            $file->move('image',$filename);
+            $file->move('image', $filename);
             $event->image = $filename;
-        }else{
+        } else {
             return $request;
             $add->image = '';
             echo "Error";
         }
         $event->save();
 
-        return redirect('/event-index')->with('event',$event);
+        return redirect('/event-index')->with('event', $event);
     }
 
-    public function destroy($id){
+    public function destroy($id)
+    {
         $event = Event::find($id);
         $event->delete();
-        return redirect('event-index')->with('event',$event);
+        return redirect('event-index')->with('event', $event);
     }
 
-    public function indexForUser(){
+    public function indexForUser()
+    {
         $events = Event::all();
-        return view('home.event',compact('events'));
+        return view('home.event', compact('events'));
     }
+
 }
