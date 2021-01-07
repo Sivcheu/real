@@ -52,6 +52,7 @@ class DonationController extends Controller
             ->join('users', 'donations.user_id', 'users.id')
             ->join('orgs', 'donations.org_id', 'orgs.id')
             ->select('donations.id', 'users.lastname', 'donations.amount', 'orgs.name')
+            ->orderBy('org_id')
             ->get();
         return view('donation.index', compact('donors'));
     }

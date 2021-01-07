@@ -23,7 +23,7 @@ class UserController extends Controller
             return "Username and password in wrong";
         } else {
             $request->session()->put('user', $user);
-            return redirect('/home');
+            return redirect('/home')->with('login','You are login !');
         }
     }
 
@@ -46,8 +46,10 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
+        // $user (Save All)
+        // $user->id (Save Id)
         $request->session()->put('user', $user);
-        return redirect('/home');
+        return redirect('/home')->with('register','You have successfully register!');
     }
 
     public function logout()

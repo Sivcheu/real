@@ -38,7 +38,7 @@ Route::post('/event-update', [\App\Http\Controllers\EventController::class, 'upd
 Route::get('/event-delete/{id}', [\App\Http\Controllers\EventController::class, 'destroy']);
 Route::get('/userJoinEvent',[\App\Http\Controllers\EventHasUserController::class,'userJoinEvent']);
 
-Route::post('/test',[\App\Http\Controllers\EventHasUserController::class,'join']);
+Route::post('/test',[\App\Http\Controllers\EventHasUserController::class,'join'])->middleware("userAuth");
 //for user
 Route::get('/event',[\App\Http\Controllers\EventController::class,'indexForUser']);
 

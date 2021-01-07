@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -29,7 +30,10 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
     }
 
-    .navbar-brand, .nav-link, .my-form, .login-form {
+    .navbar-brand,
+    .nav-link,
+    .my-form,
+    .login-form {
         font-family: Raleway, sans-serif;
     }
 
@@ -97,11 +101,13 @@
     .volunteer {
         background-color: #e1e1e7;
     }
-    .cs-footer{
+
+    .cs-footer {
         background-color: #e1e1e7 !important;
         margin-top: 100px !important;
     }
 </style>
+
 <body>
 {{\Illuminate\Support\Facades\View::make('navbar')}}
 @yield('intro')
@@ -109,13 +115,18 @@
 <div class="container">
     @yield('ct')
 </div>
+
 @yield('vol')
+
 <div class="container">
     @yield('event')
 </div>
+
 {{\Illuminate\Support\Facades\View::make('footer')}}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+
 </body>
+
 </html>

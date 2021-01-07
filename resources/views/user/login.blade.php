@@ -1,6 +1,14 @@
 @extends('layouts.wrapper')
 
 @section('ct')
+    @if(\Illuminate\Support\Facades\Session::has('loginFirst'))
+        <div class="container">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{\Illuminate\Support\Facades\Session::get('loginFirst')}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    @endif
     <main class="login-form">
         <div class="row justify-content-center">
             <div class="col-md-8">
