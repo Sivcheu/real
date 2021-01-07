@@ -106,6 +106,10 @@
         background-color: #e1e1e7 !important;
         margin-top: 100px !important;
     }
+    .vol{
+        height: 590px;
+    }
+
 </style>
 
 <body>
@@ -122,7 +126,7 @@
     @yield('event')
 </div>
 
-{{\Illuminate\Support\Facades\View::make('footer')}}
+@yield('footer')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>

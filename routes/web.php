@@ -62,3 +62,6 @@ Route::post('/donate',[\App\Http\Controllers\DonationController::class,'donate']
 //for user
 Route::get('/volForm/{id}',[\App\Http\Controllers\VolunteerController::class,'joinForm']);
 Route::post('/vol-join',[\App\Http\Controllers\VolunteerController::class,'join']);
+
+//for admin
+Route::get('/volunteer',[\App\Http\Controllers\VolunteerController::class,'volunteer']);

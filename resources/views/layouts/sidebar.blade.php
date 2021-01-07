@@ -42,15 +42,18 @@
         margin-bottom: 1rem;
         list-style: none;
     }
-    .sidebar a{
+
+    .sidebar a {
         color: black;
         text-decoration: none;
 
     }
-    .main{
+
+    .main {
         margin-left: 200px;
     }
-    .sidebar-menu{
+
+    .sidebar-menu {
         padding: 2em;
     }
 
@@ -61,10 +64,10 @@
         <h3>admin</h3>
     </div>
     <div class="sidebar-menu">
-        <ul >
+        <ul>
             <li>
-                <a href="/userJoinEvent">
-                    <span>UserJoinEvent</span>
+                <a href="/admin">
+                    <span>Home</span>
                 </a>
             </li>
             <li>
@@ -78,7 +81,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="/volunteer">
                     <span>Volunteer</span>
                 </a>
             </li>

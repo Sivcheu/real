@@ -9,7 +9,7 @@
             <th scope="col">DonorName</th>
             <th scope="col">Amount</th>
             <th scope="col">Organization</th>
-            <th scope="col">Action</th>
+            <th scope="col">Total Amount = {{$total}} $</th>
         </tr>
         </thead>
         <tbody>

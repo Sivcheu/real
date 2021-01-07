@@ -1,7 +1,7 @@
 @extends('layouts.sidebar')
 
 @section('content')
-    <h1 class="text-center">List All Donors</h1>
+    <h1 class="text-center">User Who Join Event</h1>
     <table class="table">
         <thead>
         <tr>

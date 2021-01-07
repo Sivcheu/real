@@ -40,7 +40,7 @@ class DonationController extends Controller
             $donate->user_id = $request->session()->get('user')['id'];
             $donate->org_id = $request->org_id;
             $donate->save();
-            return redirect('/donation');
+            return redirect('/home')->with('donate','Thank you for your donation!');
         } else {
             return redirect('/loginForm');
         }
@@ -54,7 +54,9 @@ class DonationController extends Controller
             ->select('donations.id', 'users.lastname', 'donations.amount', 'orgs.name')
             ->orderBy('org_id')
             ->get();
-        return view('donation.index', compact('donors'));
+        $total = DB::table('donations')
+            ->sum('donations.amount');
+        return view('donation.index', compact('donors','total'));
     }
 
 }

@@ -16,7 +16,7 @@ class CreateOrgsTable extends Migration
         Schema::create('orgs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('des');
+            $table->string('des',1000);
             $table->string('image');
             $table->timestamps();
         });

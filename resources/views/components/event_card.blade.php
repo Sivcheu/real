@@ -18,13 +18,13 @@
                 @csrf
                 <input type="hidden" name="event_id" value={{$event->id}}>
                 <button type="submit" class="btn btn-success">
-                    Join now
+                    Join Event
                 </button>
             </form>
-            @if (session('user') && $event->isJoin(session('user')->id))
-                <small class="text-muted">(You already joined!)</small>
-            @endif
         </div>
+        @if (session('user') && $event->isJoin(session('user')->id))
+            <small class="text-muted">(You already joined!)</small>
+        @endif
         <div class="card-footer text-muted">
             Ending date: {{$event->end}}
         </div>
