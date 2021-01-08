@@ -1,4 +1,4 @@
-@extends('layouts.sidebar')
+    @extends('layouts.sidebar')
 
 @section('content')
     <h1 class="text-center">Event Management</h1>

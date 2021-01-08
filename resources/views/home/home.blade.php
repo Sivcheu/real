@@ -27,13 +27,17 @@
             </div>
         @endif
     </div>
-
+    <div class="hero-image" style="background-image: url({{url('4.jpg')}})">
+        <div class="hero-text">
+            <h1 style="font-size: 80px; font-family: fantasy">Save our country</h1>
+        </div>
+    </div>
     <section id="intro">
         <div class="welcome">
             <div class="container">
                 <div class="row p-5">
-                    <div class="col-8 ">
-                        <h2 class="text-center pb-3">Welcome To Charity</h2>
+                    <div class="col-md-8">
+                        <h2 class="text-center pb-3 intro">Welcome To Charity</h2>
                         <h5 class="text-left" style="color: gray">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been
@@ -49,9 +53,9 @@
                             Lorem Ipsum.
                         </h5>
                     </div>
-                    <div class="col-4 ">
+                    <div class="col-md-4 ">
                         <img src="https://cambodia1.files.wordpress.com/2009/06/470.jpg" alt=""
-                             style="border-radius: 10px">
+                             style="border-radius: 10px" class="intro1">
                     </div>
                 </div>
             </div>
@@ -68,9 +72,9 @@
                 </h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row shadow">
             @foreach($orgs as $org)
-                <div class="col-4">
+                <div class="col-lg-4 col-md-6 col-xs-12 shadow-sm rounded">
                     <div class="p-3 text-center" style="width: auto; height: fit-content">
                         <img class="card-img-top cs-image mt-1" src="{{asset('image/'.$org->image)}}"
                              alt="Card image cap">
@@ -90,18 +94,6 @@
             @endforeach
         </div>
     </section>
-@endsection
-{{--volunteer--}}
-@section('vol')
-    <div class="container">
-        <div class="vol shadow rounded mt-5">
-            <div class="row">
-                <div class="col-4">
-                    <img src="https://elspethgrant.weebly.com/uploads/1/3/2/9/13290557/4562159_orig.jpg" alt="" style="width: 700px">
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
 {{--Event--}}
 @section('event')

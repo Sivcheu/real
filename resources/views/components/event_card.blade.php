@@ -10,8 +10,9 @@
             <p class="card-text cs-p">
                 {{$event->description}}
             </p>
-            <img style="width: 700px " src="{{asset('image/'.$event->image)}}" alt="">
+            <img src="{{asset('image/'.$event->image)}}" alt="" class="event-image">
         </div>
+
         <div class="text-center mb-3">
             <a href="/volForm/{{$event->id}}" class="btn btn-primary">Join Volunteer</a>
             <form action="/test" method="POST" class="d-inline">

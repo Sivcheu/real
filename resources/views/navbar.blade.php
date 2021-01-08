@@ -1,7 +1,11 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-light sticky-top shadow-sm rounded">
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
     <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <a class="navbar-brand" href="{{ url('/home') }}">CamCharity</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
 
                 <li class="nav-item float-right pl-2 pr-2 ">
@@ -17,7 +21,7 @@
                 </li>
             </ul>
             <div class="d-flex">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
+                <ul class="navbar-nav">
                     @if(Session::has('user'))
                         <li class="nav-item">
                             <a class="nav-link" href="/logout">Logout</a>

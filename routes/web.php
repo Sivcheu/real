@@ -29,30 +29,30 @@ Route::get('/adminForm',[\App\Http\Controllers\AdminController::class, 'adminLog
 Route::post('/adminLogin',[\App\Http\Controllers\AdminController::class,'adminLogin']);
 Route::get('/adminLogout',[\App\Http\Controllers\AdminController::class, 'logout']);
 //for admin
-Route::get('/event-index', [\App\Http\Controllers\EventController::class, 'index']);
-Route::get('/event-create', [\App\Http\Controllers\EventController::class, 'create']);
-Route::post('/event-add', [\App\Http\Controllers\EventController::class, 'store'])->name('add_event');
-Route::get('/event-show/{id}', [\App\Http\Controllers\EventController::class, 'show']);
-Route::get('/event-edit/{id}', [\App\Http\Controllers\EventController::class, 'edit']);
-Route::post('/event-update', [\App\Http\Controllers\EventController::class, 'update'])->name('update_event');
-Route::get('/event-delete/{id}', [\App\Http\Controllers\EventController::class, 'destroy']);
-Route::get('/userJoinEvent',[\App\Http\Controllers\EventHasUserController::class,'userJoinEvent']);
+Route::get('/event-index', [\App\Http\Controllers\EventController::class, 'index'])->middleware('adminAuth');
+Route::get('/event-create', [\App\Http\Controllers\EventController::class, 'create'])->middleware('adminAuth');
+Route::post('/event-add', [\App\Http\Controllers\EventController::class, 'store'])->name('add_event')->middleware('adminAuth');
+Route::get('/event-show/{id}', [\App\Http\Controllers\EventController::class, 'show'])->middleware('adminAuth');
+Route::get('/event-edit/{id}', [\App\Http\Controllers\EventController::class, 'edit'])->middleware('adminAuth');
+Route::post('/event-update', [\App\Http\Controllers\EventController::class, 'update'])->name('update_event')->middleware('adminAuth');
+Route::get('/event-delete/{id}', [\App\Http\Controllers\EventController::class, 'destroy'])->middleware('adminAuth');
+Route::get('/userJoinEvent',[\App\Http\Controllers\EventHasUserController::class,'userJoinEvent'])->middleware('adminAuth');
 
 Route::post('/test',[\App\Http\Controllers\EventHasUserController::class,'join'])->middleware("userAuth");
 //for user
 Route::get('/event',[\App\Http\Controllers\EventController::class,'indexForUser']);
 
 //for admin
-Route::get('/org-index',[\App\Http\Controllers\OrgController::class, 'index']);
-Route::get('/org-create', [\App\Http\Controllers\OrgController::class, 'create']);
-Route::post('/org-add', [\App\Http\Controllers\OrgController::class, 'store'])->name('add_org');
-Route::get('/org-show/{id}', [\App\Http\Controllers\OrgController::class, 'show']);
-Route::get('/org-edit/{id}', [\App\Http\Controllers\OrgController::class, 'edit']);
-Route::post('/org-update', [\App\Http\Controllers\OrgController::class, 'update'])->name('update_org');
-Route::get('/org-delete/{id}', [\App\Http\Controllers\OrgController::class, 'destroy']);
+Route::get('/org-index',[\App\Http\Controllers\OrgController::class, 'index'])->middleware('adminAuth');
+Route::get('/org-create', [\App\Http\Controllers\OrgController::class, 'create'])->middleware('adminAuth');
+Route::post('/org-add', [\App\Http\Controllers\OrgController::class, 'store'])->middleware('adminAuth')->name('add_org');
+Route::get('/org-show/{id}', [\App\Http\Controllers\OrgController::class, 'show'])->middleware('adminAuth');
+Route::get('/org-edit/{id}', [\App\Http\Controllers\OrgController::class, 'edit'])->middleware('adminAuth');
+Route::post('/org-update', [\App\Http\Controllers\OrgController::class, 'update'])->middleware('adminAuth')->name('update_org');
+Route::get('/org-delete/{id}', [\App\Http\Controllers\OrgController::class, 'destroy'])->middleware('adminAuth');
 
 //for admin
-Route::get('/donation-index',[\App\Http\Controllers\DonationController::class,'donation']);
+Route::get('/donation-index',[\App\Http\Controllers\DonationController::class,'donation'])->middleware('adminAuth');
 
 //for user
 Route::get('/donation',[\App\Http\Controllers\DonationController::class, 'index']);
@@ -64,4 +64,5 @@ Route::get('/volForm/{id}',[\App\Http\Controllers\VolunteerController::class,'jo
 Route::post('/vol-join',[\App\Http\Controllers\VolunteerController::class,'join']);
 
 //for admin
-Route::get('/volunteer',[\App\Http\Controllers\VolunteerController::class,'volunteer']);
+Route::get('/volunteer',[\App\Http\Controllers\VolunteerController::class,'volunteer'])->middleware('adminAuth');
+Route::get('/homeAdmin',[\App\Http\Controllers\AdminController::class,'homeAdmin'])->middleware('adminAuth');

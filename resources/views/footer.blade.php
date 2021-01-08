@@ -1,72 +1,50 @@
-<!-- Footer -->
-<footer class="bg-light text-center text-lg-start cs-footer " >
-    <!-- Grid container -->
-    <div class="container p-4">
-        <!--Grid row-->
-        <div class="row">
-            <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Footer Content</h5>
+<footer class="bg-light text-center mt-5">
+    <div class="cs-footer">
+        <div class="container px-4">
+            <div class="row gx-5">
+                <div class="col-lg-6 col-md-6 col-xs-12 mt-3">
+                    <div class="p-3">
+                        <div>
+                            <a class="navbar-brand" href="{{ url('/home') }}">CamCharity</a>
+                        </div>
+                        <p class="footer-p">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua.
+                        </p>
+                        <i class="fa fa-phone" aria-hidden="true">
+                            <a href="tel:85570425858">: 070425858</a>
+                        </i>
+                        <div class="mt-2">
+                            <i class="fa fa-envelope" aria-hidden="true">
+                                <a href="mailto:Choeng.sivcheu02@gmail.com?subject = Feedback&body = Message">
+                                    Choeng.sivcheu02@gmail.com
+                                </a>
+                            </i>
+                        </div>
+                    </div>
+                </div>
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                    voluptatem veniam, est atque cumque eum delectus sint!
-                </p>
+                <div class="col-lg-6 col-md-6 col-xs-12mt-3">
+                    <div class="p-3">
+                        <h4>
+                            feedback!
+                        </h4>
+                        <form action="">
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-success ">Feedback</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
-
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <a href="#!" class="text-dark">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">Link 4</a>
-                    </li>
-                </ul>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-0">Links</h5>
-
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#!" class="text-dark">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">Link 4</a>
-                    </li>
-                </ul>
-            </div>
-            <!--Grid column-->
         </div>
-        <!--Grid row-->
     </div>
-    <!-- Grid container -->
+    <div class="sticky-footer">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">CamCharity</a>
+        </div>
+    </div>
 
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-dark" href="https://mdbootstrap.com/">CamCharity</a>
-    </div>
-    <!-- Copyright -->
 </footer>
-<!-- Footer -->
