@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="914a62f4-2ccd-4114-b748-0b10956930ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/listFeedback.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/donation_card.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/event_card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/event_card.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DonationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DonationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/pagePro.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/pagePro.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/events/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/events/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/donation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/donation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/event.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/wrapper.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/wrapper.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +193,9 @@
       <workItem from="1609958298134" duration="565000" />
       <workItem from="1609959028486" duration="2813000" />
       <workItem from="1609962245083" duration="30937000" />
-      <workItem from="1610082230447" duration="670000" />
+      <workItem from="1610082230447" duration="6126000" />
+      <workItem from="1610110580911" duration="1824000" />
+      <workItem from="1610112539195" duration="2520000" />
     </task>
     <servers />
   </component>

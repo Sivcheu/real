@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\Feedback;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -65,6 +66,16 @@ class UserController extends Controller
     }
     public function adminLoginForm(){
         return view('admin.login');
+    }
+    public function feedback(Request $request){
+        $feedback = new Feedback();
+        $feedback->feedback = $request->feedback;
+        $feedback->save();
+        return redirect('/home')->with('feedback',"Thank you for your feedback");
+    }
+    public function listFeedback(){
+        $feedback = Feedback::all();
+        return view('admin.listFeedback',compact('feedback'));
     }
 
 

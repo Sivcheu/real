@@ -17,7 +17,7 @@
                         <div class="mt-2">
                             <i class="fa fa-envelope" aria-hidden="true">
                                 <a href="mailto:Choeng.sivcheu02@gmail.com?subject = Feedback&body = Message">
-                                    Choeng.sivcheu02@gmail.com
+                                    CamCharity@gmail.com
                                 </a>
                             </i>
                         </div>
@@ -29,22 +29,21 @@
                         <h4>
                             feedback!
                         </h4>
-                        <form action="">
-                            <div class="mb-3">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <form action="/feedback" method="POST">
+                            @csrf
+                            <div class="mb-3 shadow">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="feedback"></textarea>
                             </div>
-                            <button type="button" class="btn btn-success ">Feedback</button>
+                            <button type="submit" class="btn btn-success ">Feedback</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="sticky-footer">
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2020 Copyright:
-            <a class="text-dark" href="https://mdbootstrap.com/">CamCharity</a>
-        </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-dark" href="https://www.facebook.com/piggys.cheu">CamCharity</a>
     </div>
 
 </footer>

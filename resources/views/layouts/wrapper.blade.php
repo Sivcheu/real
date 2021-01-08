@@ -24,7 +24,7 @@
     @yield('ct')
 </div>
 
-@yield('vol')
+@yield('event-header')
 
 <div class="container">
     @yield('event')

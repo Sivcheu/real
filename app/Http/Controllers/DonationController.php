@@ -28,7 +28,7 @@ class DonationController extends Controller
             $org = Org::where('id', $id)->first();
             return view('home.donationForm', compact('org'));
         } else {
-            return redirect('/loginForm');
+            return redirect('/loginForm')->with('loginFirst',"You have to login first");
         }
     }
 

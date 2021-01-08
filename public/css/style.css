@@ -67,6 +67,11 @@ body {
     overflow: auto;
 }
 
+.cs-p-donation {
+    max-height: 120px;
+    overflow: auto;
+}
+
 .cs-h {
     text-transform: uppercase;
     background-color: #2d3748;
@@ -87,7 +92,7 @@ body {
 }
 
 .cs-footer {
-    background-color: #e1e1e7 !important;
+    background-color: white !important;
     margin-top: 50px !important;
     height: 240px;
 }
@@ -114,6 +119,25 @@ body {
     color: white;
 }
 
+.hero-image-2 {
+    margin-top: 30px;
+    background-color: #cccccc;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text-2 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: green;
+}
+
 .event-image {
     width: 700px;
 }
@@ -121,18 +145,26 @@ body {
 .intro1 {
     display: block;
 }
-.footer-p{
+
+.footer-p {
     margin-left: 30px;
     width: 80%;
 }
-i a{
+
+i a {
     text-decoration: none;
     color: gray;
 }
-i a:hover{
+
+i a:hover {
     text-decoration: none;
     color: green;
 }
+
+a {
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 1000px) {
     .event-image {
         width: 500px;
@@ -184,6 +216,15 @@ i a:hover{
         width: 300px;
         border-radius: 20px;
     }
+
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
 }
 
 @media only screen and (max-width: 775px) {
@@ -193,8 +234,17 @@ i a:hover{
         width: 300px;
         border-radius: 20px;
     }
-    .footer-p{
+
+    .footer-p {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .cs-footer {
+        background-color: white !important;
+        margin-top: 50px !important;
+        height: 350px;
     }
 }
 
@@ -218,14 +268,7 @@ i a:hover{
         width: 400px;
     }
 
-    .hero-text {
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-    }
+
 }
 
 @media only screen and (max-width: 445px) {
@@ -241,7 +284,8 @@ i a:hover{
         width: 350px;
         border-radius: 20px;
     }
-    .sticky-footer{
+
+    .sticky-footer {
         display: none;
     }
 }

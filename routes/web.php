@@ -63,6 +63,8 @@ Route::post('/donate',[\App\Http\Controllers\DonationController::class,'donate']
 Route::get('/volForm/{id}',[\App\Http\Controllers\VolunteerController::class,'joinForm']);
 Route::post('/vol-join',[\App\Http\Controllers\VolunteerController::class,'join']);
 
+Route::post('/feedback',[\App\Http\Controllers\UserController::class,'feedback']);
+Route::get('/listFeedback',[\App\Http\Controllers\UserController::class,'listFeedback']);
 //for admin
 Route::get('/volunteer',[\App\Http\Controllers\VolunteerController::class,'volunteer'])->middleware('adminAuth');
 Route::get('/homeAdmin',[\App\Http\Controllers\AdminController::class,'homeAdmin'])->middleware('adminAuth');
